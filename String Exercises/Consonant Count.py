@@ -1,9 +1,8 @@
 def has_consonant_count(text, target):
-    consonants = "bcdfghjklmnpqrstvwxyz"
+    consonants = set("bcdfghjklmnpqrstvwxyz")
     count =0
     for ch in text:
-        if ch.isalpha():
-            if ch.lower() in consonants:
+        if ch.isalpha() and ch.lower() in consonants:
                 count+=1
 
     return count==target
